@@ -1,5 +1,5 @@
 <template>
-  <a href="#" @click.prevent="$parent.sortBy(name)">
+  <a href="#" @click.prevent="$parent.sortBy(name)" :class="{sorting: $parent.getCurrentSort() == name}">
     <slot>{{ name }}</slot>
     <slot name="icon">
       <span
